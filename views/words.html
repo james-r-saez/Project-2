@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Words</title>
+  </head>
+  <body>
+    <h3>All the Words</h3>
+    {{#wordsData}}
+    <h4>{{id}}</h4>
+    <p>{{name}}: {{definition}}</p>
+    <p>is done: {{is_done}}</p>
+    {{/wordsData}}
+  </body>
+</html>
