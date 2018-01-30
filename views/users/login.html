@@ -9,16 +9,17 @@
 <body>
   <main>
     <section>
-      <h1>Login</h1>
+      <h1>Login to your account</h1>
       <form action="/users/login" method="POST">
         <label for="email">Email</label><br>
-        <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
+        <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br><br>
         <label for="password">Password</label><br>
-        <input id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
+        <input id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br><br>
         <input type="submit" value="Login">
       </form>
       <div>
-        <a href="/users/new">Sign Up</a>
+        <br>
+        New User: <a href="/users/new">Register Here</a>
       </div>
     </section>
   </main>
