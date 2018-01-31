@@ -1,4 +1,4 @@
-const apiKey = process.env.API_KEY;
+// const apiKey = process.env.API_KEY;
 $(document).ready(function() {
 
   let counter = 0;
@@ -24,11 +24,10 @@ $(document).ready(function() {
     })
   }
 
-  function buttonOnClick (){
-    $(`#btn${counter}`).on('click', function(event){
-      console.log($(`def${counter}`).text());
-    })
-  }
+  function saveDef (){
+    // $(`#btn${counter}`).on('click', function(event){
+    //   console.log($(`def${counter}`).text());
+    }
 
   function getData(data){
     $('#results').empty();
@@ -38,7 +37,7 @@ $(document).ready(function() {
     data.forEach(function(element){
       let elText = element.text;
       $("#results").append(`<li> ${elText} <button>Save this definition</button> </li> <br>`);
-      buttonOnClick();
+      saveDef();
       counter++;
     })
   }
