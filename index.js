@@ -1,4 +1,5 @@
 // Require packages
+const dotenv = require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const mustacheExpress = require('mustache-express');
@@ -54,5 +55,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log('Server started on ' + PORT);
+  console.log(`Server listening on port ${PORT}!`);
 });

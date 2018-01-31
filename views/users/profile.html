@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Profile</title>
     <link rel="stylesheet" href="">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
 </head>
-
-<body>
+  <body>
     <main>
-        <section>
-            <p>Welcome to your profile, {{user.email}}!<p>
-              <a href="/users/logout">Logout</a>
-            <br>
-              <p>Look up a word here!</p>
-              <input id="wordInput" type="text" placeholder="Search.." name="search">
-              <button id="searchBtn" type="submit">Submit</button>
-              <ol id="results"></ol>
+      <section>
+        <p>Welcome to your profile, {{user.email}}!<p>
+          <a href="/users/logout">Logout</a><br>
+          <a href="/users/wordbank">Go to My Word Bank</a>
+          <br>
+          <p>Look up a word here!</p>
+          <input id="wordInput" type="text" placeholder="Search.." name="search">
+          <button id="searchBtn" type="submit">Submit</button>
+          <div id="wordDef"></div>
+          <ol id="results"></ol>
         </section>
-    </main>
-</body>
-
-</html>
+      </main>
+    </body>
+  </html>
