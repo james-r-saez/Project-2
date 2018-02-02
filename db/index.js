@@ -6,6 +6,6 @@ const cn = {
   database: 'words_list'
 };
 
-const db = pgp(cn);
+const db = pgp(process.env.DATABASE_URL || cn);
 
 module.exports = db;
