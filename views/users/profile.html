@@ -3,23 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>User Profile</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
 </head>
   <body>
-    <main>
-      <section>
-        <p>Welcome to your profile, {{user.email}}!<p>
-          <a href="/users/logout">Logout</a><br>
-          <a href="/users/wordbank">Go to My Word Bank</a>
-          <br>
-          <p>Look up a word here!</p>
-          <input id="wordInput" type="text" placeholder="Search.." name="search">
-          <button id="searchBtn" type="submit">Submit</button>
-          <div id="wordDef"></div>
-          <ol id="results"></ol>
-        </section>
-      </main>
-    </body>
-  </html>
+    <p>Welcome to your profile, {{user.email}}! You are user #{{user.id}}.<p>
+    <p>Look up a word here!</p>
+    <input id="wordInput" type="text" placeholder="Search.." name="search">
+    <button id="searchBtn" type="submit">Submit</button>
+    <div id="wordDef"></div>
+    <ol id="results"></ol>
+    <p><a href="/users/wordbank">Go to the wordbank</a></p>
+    <p><a href="/users/logout">Logout</a></p>
+  </body>
+</html>

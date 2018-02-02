@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   function searchWord(chosenWord){
     $.ajax({
-      type: 'GET',
+      method: 'GET',
       url: `http://api.wordnik.com:80/v4/word.json/${chosenWord}/definitions?limit=200&includeRelated=true&sourceDictionaries=webster&useCanonical=false&includeTags=false&api_key=de46d050b4e484050513f6e18e8051329c1ad1448e704f362`,
       success: function(responseData){
         console.log(responseData);
@@ -25,20 +25,52 @@ $(document).ready(function() {
   }
 
   function saveDef (){
-    // $(`#btn${counter}`).on('click', function(event){
-    //   console.log($(`def${counter}`).text());
-    }
+    $('#wordBtn').click(e => {
+    	e.preventDefault();
+    	const word = e.target.getAttribute('data-word');
+      const definition = e.target.getAttribute('data-def');
+    	$.ajax({
+    		url: "/users/wordbank",
+    		method: "POST",
+    		data: {name: word, definition: definition},   //this object will be available to server as req.body (for post request)
+    		success: function(data){
+    			const newWordId = data.newWordId;
+          alert('Word Saved!')
+    		}
+    	});
+    });
+  }
 
   function getData(data){
     $('#results').empty();
     $('#wordDef').empty();
     const dataWord = data[0].word;
-    $('#wordDef').append(`<p>Definitions for ${dataWord}</p>`);
+    const dataDef = data[0].text;
+    console.log(dataDef);
+    $('#wordDef').append(`<p>Definitions for ${dataWord} <button id='wordBtn' data-word ="${dataWord}" data-def="${dataDef}" >Save this word</button> </p>`);
     data.forEach(function(element){
       let elText = element.text;
-      $("#results").append(`<li> ${elText} <button>Save this definition</button> </li> <br>`);
-      saveDef();
+      $("#results").append(`<li> ${elText} </li> <br>`);
       counter++;
-    })
+    });
+    saveDef();
+    moment().format('MMMM Do YYYY, h:mm:ss a')
   }
+
+
+  $('.deleteBtn').click(e => {
+  	e.preventDefault();
+    const word = e.target.getAttribute('data-word');
+  	$.ajax({
+  		url: "/users/wordbank/",
+  		method: "DELETE",
+  		data: {name: word},
+  		success: function(data){
+  			const newWordId = data.newWordId;
+        alert('Word Deleted!')
+      }
+    });
+  });
+
+
 })

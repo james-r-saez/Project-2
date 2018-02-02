@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>User WordBank</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+  <div id='wordbank'>
+  <h3>Welcome to the wordbank!</h3>
+  {{#wordsData}}
+
+  <h4>{{userId}}</h4>
+  <p id='{{name}}'>{{name}}: {{definition}}
+  <br>added by user #{{userid}}  <button class="deleteBtn" data-word="{{name}}">Delete!</button></p>
+
+  {{/wordsData}}
+  </div>
+</body>
+</html>

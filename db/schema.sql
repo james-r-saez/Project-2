@@ -15,7 +15,8 @@ CREATE TABLE users (
 DROP TABLE IF EXISTS words CASCADE;
 
 CREATE TABLE words (
-  id SERIAL PRIMARY KEY,
+  id BIGSERIAL PRIMARY KEY,
   name VARCHAR(255),
-  definition VARCHAR(255)
+  definition TEXT,
+  userId INTEGER references users(id)
 );

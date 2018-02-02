@@ -43,10 +43,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.use('/words', wordsRouter);
-
 const userRouter = require('./controllers/users.js');
+
 app.use('/users', userRouter);
+
+app.use('/users/wordbank', wordsRouter);
 
 app.use((err, req, res, next) => {
   console.log('Error encountered:', err);

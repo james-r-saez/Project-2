@@ -3,24 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>Login User</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <main>
-    <section>
-      <h1>Login to your account</h1>
-      <form action="/users/login" method="POST">
-        <label for="email">Email</label><br>
-        <input id="email" type="text" name="user[email]" placeholder="Enter your email"><br><br>
-        <label for="password">Password</label><br>
-        <input id="password" type="password" name="user[password]" placeholder="Enter your password"><br><br>
-        <input type="submit" value="Login">
-      </form>
-      <div>
-        <br>
-        New User: <a href="/users/new">Register Here</a>
-      </div>
-    </section>
-  </main>
+  <h1>Login to your account</h1>
+  <form action="/users/login" method="POST">
+    <label for="email">Email</label><br>
+    <input id="email" type="text" name="user[email]" placeholder="Enter your email"><br><br>
+    <label for="password">Password</label><br>
+    <input id="password" type="password" name="user[password]" placeholder="Enter your password"><br><br>
+    <input type="submit" value="Login">
+  </form>
+  <br><br>
+  <div>
+    New User: <a href="/users/new">Register Here</a>
+  </div>
 </body>
 </html>

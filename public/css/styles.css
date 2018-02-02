@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+
+#wordbank {
+  text-align: left;
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
