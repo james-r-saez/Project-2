@@ -10,9 +10,9 @@ This is a study app I made for students who want to study for SAT/GRE or simply 
 In this app, the user must create an account and then log in. Once logged in, the user can search for words using the Wordnik API. These words can then be saved onto the app's wordbank, allowing users to study the words at a later time. A delete feature for the words was also almost completed, and is something I plan to finish soon when time permits.
 
 ## Installation Instructions
-Run npm install to install all required packages. If any bugs occur, run bcryptjs body-parser cookie-parser dotenv express express-session moment morgan mustache-express passport passport-local pg-promise --save.
+Run `npm install` to install all required packages. If any bugs occur, run `npm install bcryptjs body-parser cookie-parser dotenv express express-session moment morgan mustache-express passport passport-local pg-promise --save`.
 
-Then run psql -f db/schema.sql to start the database.
+Then run `psql -f db/schema.sql` to start the database. You must have PostgreSQL already installed.
 
 Finally run node index.js.
 
