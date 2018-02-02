@@ -14,7 +14,7 @@ Run `npm install` to install all required packages. If any bugs occur, run `npm 
 
 Then run `psql -f db/schema.sql` to start the database. You must have PostgreSQL already installed.
 
-Finally run node index.js.
+Finally run `node index.js`.
 
 ## Pain Points
 ![Pain Points](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4X74rtuhnFsCgOy2x_s8ze0I3F-VPh_VFTyJwjBt5asq65i7Z)
