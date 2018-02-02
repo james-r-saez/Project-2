@@ -1,3 +1,3 @@
 # Project-2
 
-Coming along.... slowly......
+This is my project 2
